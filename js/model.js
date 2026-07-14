@@ -15,21 +15,21 @@ const Model = {
     {
       title: "Kokichi - Desktop Pet",
       tag: "Python · IA", color: "#3572A5",
-      url: "https://github.com/fivethegoat", cta: "Voir sur GitHub →", // TODO: lien exact du repo
+      url: "https://github.com/fivethegoat", cta: "Je gatekeep mdr", // TODO: lien exact du repo
       img: "assets/projects/kokichi.png",
       desc: "Un desktop pet en PyQt6 qui incarne Kokichi Ôma (Danganronpa V3) : machine à états, sprites animés et dialogues générés via l'API Claude pour rester fidèle au perso.",
     },
     {
       title: "Pizzayolo",
       tag: "Godot 4", color: "#478cbf",
-      url: "https://github.com/fivethegoat", cta: "Voir sur GitHub →", // TODO
+      url: "https://github.com/fivethegoat", cta: "Je gatekeep aussi ;)", // TODO
       img: "assets/projects/pizzayolo.png",
       desc: "Un endless runner sous Godot 4 : le joueur ramasse des pizzas en étant poursuivi par Monokuma. Mon premier projet de gamedev complet.",
     },
     {
       title: "Site de révision BTS SIO",
       tag: "Web", color: "#e34c26",
-      url: "https://fivethegoat.github.io", cta: "Voir le site →",
+      url: "https://fivethegoat.github.io", cta: "plus dispo vu qu'on a passé l'année",
       img: "assets/projects/revision.png",
       desc: "Site interactif hébergé sur GitHub Pages couvrant 21 chapitres du BTS SIO avec quiz, synthèse vocale et interface sombre — pour réviser sans (trop) souffrir.",
     },
