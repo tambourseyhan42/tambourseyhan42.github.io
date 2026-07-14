@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MICKAËL · PORTFOLIO</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-screen="home">
+
+<div id="bg" aria-hidden="true">
+  <div class="bg-layer" id="bg-stripes"></div>
+  <svg class="bg-star" style="left:6%;top:8%;width:26vmax;height:26vmax" viewBox="0 0 100 100">
+    <polygon points="50,0 60,35 98,35 68,57 78,94 50,72 22,94 32,57 2,35 40,35" fill="#000"/>
+  </svg>
+  <svg class="bg-star s2" style="right:4%;bottom:6%;width:34vmax;height:34vmax" viewBox="0 0 100 100">
+    <polygon points="50,0 60,35 98,35 68,57 78,94 50,72 22,94 32,57 2,35 40,35" fill="#fff"/>
+  </svg>
+  <img class="menu-art" id="art-home" src="assets/menus/home.jpg" alt=""
+       onload="document.body.classList.add('has-art-home')" onerror="this.remove()">
+  <img class="menu-art" id="art-projects" src="assets/menus/projects.jpg" alt=""
+       onload="document.body.classList.add('has-art-projects')" onerror="this.remove()">
+  <img class="menu-art" id="art-skills" src="assets/menus/skills.jpg" alt=""
+       onload="document.body.classList.add('has-art-skills')" onerror="this.remove()">
+  <img class="menu-art" id="art-about" src="assets/menus/about.jpg" alt=""
+       onload="document.body.classList.add('has-art-about')" onerror="this.remove()">
+  <img class="menu-art" id="art-contact" src="assets/menus/contact.jpg" alt=""
+       onload="document.body.classList.add('has-art-contact')" onerror="this.remove()">
+  <div class="bg-layer" id="bg-halftone"></div>
+  <div class="bg-layer" id="bg-vignette"></div>
+</div>
+<div id="slash" aria-hidden="true"></div>
+
+<img id="hero-art" src="assets/hero.png" alt="" onerror="this.remove()">
+
+<div id="wipe" aria-hidden="true">
+  <div class="pane p3"></div>
+  <div class="pane p2"></div>
+  <div class="pane p1"></div>
+  <div class="flash"></div>
+</div>
+
+<div id="cursor" aria-hidden="true"></div>
+<audio id="sfx-select" src="assets/sfx/select.mp3" preload="auto"></audio>
+
+<div id="shell">
+  <div id="hud-top">
+    <div class="hud-tag">Portfolio // Mickaël</div>
+    <div class="hud-tag alt">Martinique · BTS SIO SISR</div>
+  </div>
+
+  <div id="stage">
+
+    <section class="screen active" id="screen-home" aria-label="Menu principal">
+      <div id="intro-eyebrow">Jette un œil à mon travail</div>
+      <h1 id="big-name">
+        <span class="ransom" data-ransom="MICKAËL"></span>
+        <span class="ransom" data-ransom="SISR"></span>
+      </h1>
+      <p id="tagline">
+        Étudiant en BTS SIO option SISR en Martinique, développeur et auto-entrepreneur en devenir.
+        Entre configs réseau (Cisco, Aruba), petits jeux sous Godot et outils Python boostés à l'IA,
+        je construis des trucs qui me ressemblent — et j'apprends à en vivre.
+      </p>
+      <nav id="menu" aria-label="Sections">
+        <button class="menu-item sel" data-target="projects">
+          <span class="ransom" data-ransom="PROJETS"></span><span class="cursor-mark">◀</span>
+        </button>
+        <button class="menu-item" data-target="skills">
+          <span class="ransom" data-ransom="COMPÉTENCES"></span><span class="cursor-mark">◀</span>
+        </button>
+        <button class="menu-item" data-target="about">
+          <span class="ransom" data-ransom="À PROPOS"></span><span class="cursor-mark">◀</span>
+        </button>
+        <button class="menu-item" data-target="contact">
+          <span class="ransom" data-ransom="CONTACT"></span><span class="cursor-mark">◀</span>
+        </button>
+      </nav>
+    </section>
+
+    <section class="screen sub" id="screen-projects" aria-label="Projets">
+      <div class="screen-head"><span class="ransom" data-ransom="PROJETS"></span></div>
+      <button class="back-hint" data-back>ESC · Retour</button>
+      <div class="grid-label"><span class="bar"></span>À la une</div>
+      <div id="feat-grid" class="grid"></div>
+      <div class="grid-label"><span class="bar"></span>Tous les dépôts</div>
+      <div id="repo-status">Connexion à GitHub…</div>
+      <div id="repo-grid" class="grid"></div>
+    </section>
+
+    <section class="screen sub" id="screen-skills" aria-label="Compétences">
+      <div class="screen-head"><span class="ransom" data-ransom="COMPÉTENCES"></span></div>
+      <button class="back-hint" data-back>ESC · Retour</button>
+      <div id="skills-body"></div>
+    </section>
+
+    <section class="screen sub align-right" id="screen-about" aria-label="À propos">
+      <div class="screen-head"><span class="ransom" data-ransom="À PROPOS"></span></div>
+      <button class="back-hint" data-back>ESC · Retour</button>
+      <div class="paper">
+        <figure class="about-photo">
+          <img src="assets/me.jpg" alt="Mickaël" onerror="this.parentElement.remove()">
+          <figcaption>Mickaël · Martinique</figcaption>
+        </figure>
+        <p class="quote">Je crois qu'une bonne carrière, c'est pas forcément un CDI à vie —
+        c'est de <strong>construire des trucs qui rapportent sans bouffer toute ta liberté</strong>.
+        C'est le fil rouge de tout ce que je fais, du code aux vidéos.</p>
+        <br>
+        <p>Je termine mon <span class="stamp">BTS SIO — option SISR</span> en Martinique, où j'ai
+        touché à peu près à tout : configuration VLAN et routage inter-VLAN sur du vrai matériel
+        Cisco et Aruba, NAT, DHCP relay sous Windows Server, ACL, Zabbix, proxy Squid avec SSL Bump,
+        et une bonne dose de cybersécurité (RGPD, DMZ, cryptographie). Côté dev, j'aime autant coder
+        un <em>desktop pet</em> qui reprend un perso de Danganronpa avec PyQt6 et l'API Claude,
+        qu'un petit runner sous Godot 4, ou un site de révision interactif pour mes camarades de
+        promo (<a href="https://fivethegoat.github.io" target="_blank" rel="noopener">fivethegoat.github.io</a>).</p>
+        <br>
+        <p>En dehors du code, je suis à fond dans l'esthétique <strong>Frutiger Aero / Y2K</strong>
+        et le web design rétro, je speedrun à l'occasion, et je carbure aux jeux comme Pokémon,
+        Persona et Danganronpa. Je me lance aussi doucement dans la création de contenu (Twitch,
+        YouTube) — et je suis auto-entrepreneur depuis peu, ouvert à des missions ponctuelles
+        pendant que je termine mes études. L'objectif à moyen terme : voyager, direction le Japon.</p>
+      </div>
+      <a class="cv-btn" href="assets/cv/CV_Mickael.pdf" download="CV_Mickael.pdf">
+        <span>⬇ Télécharger mon CV (PDF)</span>
+      </a>
+    </section>
+
+    <section class="screen sub align-right" id="screen-contact" aria-label="Contact">
+      <div class="screen-head"><span class="ransom" data-ransom="CONTACT"></span></div>
+      <button class="back-hint" data-back>ESC · Retour</button>
+      <div class="paper" style="max-width:620px">
+        <p>Étudiant en BTS SIO SISR, ouvert aux <strong>missions freelance</strong> (réseau, dev,
+        gestion de réseaux sociaux) et aux petites collabs sympas. Écris-moi ci-dessous, ça arrive
+        direct dans ma boîte mail, ou retrouve-moi ici :</p>
+      </div>
+      <div class="contact-list">
+        <a class="contact-chip" href="mailto:TON_EMAIL_ICI@example.com"><span>Email ✉</span></a>
+        <a class="contact-chip" href="https://github.com/fivethegoat" target="_blank" rel="noopener"><span>GitHub ↗</span></a>
+        <a class="contact-chip" href="#" target="_blank" rel="noopener"><span>Twitch ↗</span></a>
+        <a class="contact-chip" href="#" target="_blank" rel="noopener"><span>YouTube ↗</span></a>
+        <a class="contact-chip" href="assets/cv/CV_Mickael.pdf" download="CV_Mickael.pdf"><span>CV ⬇</span></a>
+      </div>
+
+      <form id="contact-form" class="paper" style="max-width:620px" novalidate>
+        <div class="form-head">Envoie-moi un message</div>
+        <label class="field">
+          <span>Nom</span>
+          <input type="text" name="name" required maxlength="100" autocomplete="name">
+        </label>
+        <label class="field">
+          <span>Ton email</span>
+          <input type="email" name="email" required maxlength="150" autocomplete="email">
+        </label>
+        <label class="field">
+          <span>Message</span>
+          <textarea name="message" required rows="5" maxlength="3000"></textarea>
+        </label>
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off"
+               style="position:absolute;left:-5000px" aria-hidden="true">
+        <div class="form-foot">
+          <button type="submit" class="cv-btn form-send"><span>Envoyer ➤</span></button>
+          <div id="form-status" role="status"></div>
+        </div>
+      </form>
+    </section>
+
+  </div>
+
+  <div id="hud-bottom">
+    <span><span class="key">↑↓</span>Sélection</span>
+    <span><span class="key">Entrée</span>Valider</span>
+    <span><span class="key">Échap</span>Retour</span>
+    <span style="margin-left:auto;opacity:.8" id="clock"></span>
+  </div>
+</div>
+
+<script src="js/model.js" defer></script>
+<script src="js/view.js" defer></script>
+<script src="js/controller.js" defer></script>
+</body>
+</html>
